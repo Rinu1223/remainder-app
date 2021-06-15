@@ -1,0 +1,30 @@
+
+<form >
+    <h2 class="headingEvent">Event history</h2>
+    <div class="row mainDiv" >
+        <div class="col-4"></div>
+        <div class="col-4">
+           <table class="table">
+               <tr class="trheading">
+                   <td>Sl#</td>
+                   <td>Date</td>
+                   <td>Event</td>
+                   
+               </tr>
+               <tbody>
+                <tr  *ngFor="let result of eventDet;let i=index;">
+                   
+                 <td>{{i+1}}</td>   
+               <td >{{result.eDate}}</td>
+    
+               <td>{{result.eDetails}}</td>
+</tr>
+               </tbody>
+           </table>
+        </div>
+        <div class="col-4"></div>
+        <input type="submit" class="fadeIn fourth"  value="Add">
+        <input type="submit" class="fadeIn fourth"  value="back">
+    </div>
+    
+</form>

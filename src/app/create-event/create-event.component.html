@@ -1,0 +1,27 @@
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <h2 class="active"> Create Event </h2>
+     
+  
+      <!-- Icon -->
+      
+  
+      <!-- Login Form -->
+      
+      <form (ngSubmit)="addEvent()" [formGroup]="addform" >
+        <input type="text" class="fadeIn second" formControlName="eventDate"  name="eventDate">
+        <div class="errors" *ngIf="(addform.get('eventDate')?.touched || addform.get('eventDate')?.dirty) && addform.get('eventDate')?.errors ">please enter date</div>
+        <input type="text"  class="fadeIn third" name="login" formControlName="eventDetails" placeholder="event">
+        <div class="errors" *ngIf="(addform.get('eventDetails')?.touched || addform.get('eventDetails')?.dirty) && addform.get('eventDetails')?.errors ">Please enter event details</div>
+        <input type="submit" class="fadeIn fourth"  value="Add">
+        <input type="submit" class="fadeIn fourth"  value="back" (click)="close()">
+        
+      </form>
+  
+      
+     
+  
+    </div>
+  </div>
