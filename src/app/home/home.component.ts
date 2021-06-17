@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   user=""
-  constructor(private router:Router) {
+  constructor(private router:Router,private dataservice:DataService) {
     this.user= localStorage.getItem("name")
    }
 
@@ -21,5 +22,9 @@ export class HomeComponent implements OnInit {
 
     
     this.router.navigateByUrl('showEvent')
+  }
+  remainder(){
+   this.router.navigateByUrl('remainder')
+   
   }
 }

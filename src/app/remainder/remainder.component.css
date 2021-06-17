@@ -16,17 +16,3 @@ td
 .trheading{
     background-color: aliceblue;
 }
-.deleteButton{
-    margin-top: 10px
-}
-.ediButton{
-    margin-top: 10px;
-    margin-left: 30px;
-    width: 65px;
-}
-.btnUpdate{
-    margin-top: 27px;
-    height: 30px;
-    width: 60px;
-}
-

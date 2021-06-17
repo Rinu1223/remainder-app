@@ -42,5 +42,28 @@ return this.http.post('http://localhost:3000/login',data)
     return this.http.post('http://localhost:3000/register',data,this.options)
 
   }
-
+  deleteRow(eventdet:any,uID:any){
+    const data={
+      eventdet:eventdet,
+      uID:uID
+    }
+    return this.http.post('http://localhost:3000/deleteEvent',data,this.options)
+  }
+  displayRemainder(uID:any){
+    const data={
+      uID:uID
+    }
+    return this.http.post('http://localhost:3000/displayRemainder',data,this.options)
+  }
+  update(uID:any,indexNum:any,eDate:any,eDetails:any){
+   const data={
+      uID:uID,
+      indexNum:indexNum,
+      eDate:eDate,
+      eDetails:eDetails
+    }
+    return this.http.post('http://localhost:3000/updateRainder',data,this.options)
+    
+    
+  }
 }

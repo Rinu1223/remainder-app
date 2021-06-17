@@ -6,25 +6,63 @@
         <div class="col-4">
            <table class="table">
                <tr class="trheading">
+                   
                    <td>Sl#</td>
                    <td>Date</td>
                    <td>Event</td>
                    
                </tr>
                <tbody>
-                <tr  *ngFor="let result of eventDet;let i=index;">
+                <tr  *ngFor="let result of eventDet;let i=index;"  >
                    
-                 <td>{{i+1}}</td>   
+                 <td  >{{i+1}}</td>   
                <td >{{result.eDate}}</td>
     
                <td>{{result.eDetails}}</td>
+               <button class="deleteButton"  (click)="deleteRow(result.eDetails)">DELETE</button>
+               <button class="ediButton" (click)="updateRow(i,result.eDate,result.eDetails)" >Edit</button>
+
+
 </tr>
                </tbody>
            </table>
         </div>
         <div class="col-4"></div>
-        <input type="submit" class="fadeIn fourth"  value="Add">
-        <input type="submit" class="fadeIn fourth"  value="back">
+       
+        <input type="submit" class="fadeIn fourth"  value="back" (click)="back()" >
     </div>
+    </form>
+    <form action="">
+    <div class="row mainDiv" id="editDiv" style="display: none;" >
+        <div class="col-4"></div>
+        <div class="col-4">
+           <table class="table">
+               <tr class="trheading">
+                   
+                   
+                   <td>Date</td>
+                   <td>Event</td>
+                   
+               </tr>
+               <tbody>
+                <tr >
+                   <input type="hidden"  name="txthidden" id="" [(ngModel)]="indexNum" >
+                 <td >
+                     <input type="text" name="txtdate" id="" [(ngModel)]="edate">
+                 </td>   
+                 <td >
+                     <input type="text" name="txtEvent" id="" [(ngModel)]="edetl">
+                 </td>
     
+               <td></td>
+               <button class="btnUpdate" (click)="update(indexNum,edate,edetl)" >update</button>
+               </tr>
+               </tbody>
+           </table>
+        </div>
+        
+    </div>
+
+
+
 </form>

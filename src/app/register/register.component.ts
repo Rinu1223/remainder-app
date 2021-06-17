@@ -29,6 +29,7 @@ export class RegisterComponent implements OnInit {
     .subscribe((result:any)=>{
       if(result){
         alert(result.message)
+        this.router.navigateByUrl('')
       }
     },
     (result)=>{

@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { ShowEventComponent } from './show-event/show-event.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RemainderComponent } from './remainder/remainder.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegisterComponent,
     HomeComponent,
     ShowEventComponent,
-    CreateEventComponent
+    CreateEventComponent,
+    RemainderComponent
   ],
   imports: [
     BrowserModule,
